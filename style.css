@@ -71,3 +71,10 @@ h1{
 .hide{
     display: none;
 }
+
+@media only screen and (max-width: 600px) {
+    .msg-container{
+        height: 180vmin;
+    }
+  }
+  
