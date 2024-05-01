@@ -28,12 +28,14 @@ boxes.forEach((box) => {
     box.addEventListener("click", () => { 
         if(turnO){
             box.innerText = "O";
-            box.style.color = "blue"; 
-
+            box.style.color = "#fff"; 
+            box.style.textShadow = "0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px #ff7c7c, 0 0 70px #ff7c7c, 0 0 80px #ff7c7c, 0 0 100px #ff7c7c, 0 0 150px #ff7c7c"
+            
             turnO = false;
         }else{
             box.innerText = "X";
-            box.style.color = "red"; 
+            box.style.color = "#fff"; 
+            box.style.textShadow = " 0 0 10px blue, 0 0 20px blue, 0 0 30px blue, 0 0 40px #75aaff, 0 0 70px #75aaff, 0 0 80px #75aaff, 0 0 100px #75aaff, 0 0 150px #75aaff"
             turnO = true;
         }
         box.disabled = true;
