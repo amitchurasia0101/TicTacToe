@@ -27,7 +27,7 @@ const resetGame = () => {
 boxes.forEach((box) => {
     box.addEventListener("click", () => {
         const audioX = new Audio('tap.mp3');
-        const audioO = new Audio('sound_o.mp3');
+        const audioO = new Audio('sound.mp3');
         if(turnO){
             box.innerText = "O";
             box.style.color = "#fff"; 
