@@ -43,7 +43,7 @@ boxes.forEach((box) => {
         }
         box.disabled = true;
         checkWinner();
-        checkDraw();
+        // checkDraw();
      });
 });
 
@@ -76,10 +76,11 @@ const showWinner = (winner) => {
  };
  
  const showDraw = () => { 
-    const audiodraw = new Audio('shit.mp3');
-    audiodraw.play(); 
-    msg.innerText = `Ahh, It's a Draw!`;
-    msgContainer.classList.remove("hide");
+     const audiodraw = new Audio('shit.mp3');
+     audiodraw.play(); 
+     msg.innerText = `Ahh, It's a Draw!`;
+     msgContainer.classList.remove("hide");
+     audiowinner.muted = true;
     disableBoxes();
 };
 
@@ -95,10 +96,12 @@ const checkWinner = () => {
             if(pos1Val === pos2Val && pos2Val === pos3Val){
                 console.log("winner", pos1Val)
                 showWinner(pos1Val);
+                return;
             }
         }
         
     }
+    checkDraw();
  };
  const checkDraw = () => { 
     let isDraw = true;
